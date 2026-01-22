@@ -24,7 +24,7 @@ const fortunes = [
   "You will debug it in 5 minutes... after 55 minutes of panic.",
   "Your next commit will be clean and meaningful.",
   "A bug will disappear when you add one console.log().",
-  "You passed the vibe check today. 😎",
+  "You passed the vibe check today. 😎😎😎",
 ];
 
 const jokes = [
@@ -34,9 +34,9 @@ const jokes = [
 ];
 
 const vibeMap = {
-  happy: { emoji: "😄", message: "Keep going - you're shipping greatness!" },
-  tired: { emoji: "🥱", message: "Hydrate. Stretch. Then commit." },
-  stressed: { emoji: "😵‍💫", message: "Breathe. One bug at a time." },
+  happy: { emoji: "😄😄", message: "Keep going - you're shipping greatness!" },
+  tired: { emoji: "🥱🥱", message: "Hydrate. Stretch. Then commit." },
+  stressed: { emoji: "😵‍💫😵‍💫", message: "Breathe. One bug at a time." },
 };
 
 // Smash counter (stored in memory for now)
@@ -62,7 +62,7 @@ app.get("/api/vibe", (req, res) => {
   if (!vibe) {
     return res.json({
       mood: mood || "unknown",
-      emoji: "🤔",
+      emoji: "🤔🤔",
       message: "Try mood=happy, tired, or stressed.",
     });
   }
@@ -72,7 +72,7 @@ app.get("/api/vibe", (req, res) => {
 
 // POST /api/smash -> increases counter and returns the updated value
 app.post("/api/smash", (req, res) => {
-  smashes += 100;
+  smashes += 10;
   res.json({ smashes });
 });
 
